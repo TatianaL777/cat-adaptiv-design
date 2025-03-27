@@ -1,0 +1,85 @@
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+} 
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #f5f5f5;
+	margin-right: 430px; 
+}
+h1 {
+    margin-bottom: 20px;
+}
+p {
+    font-size: 1.2rem;
+}
+p:nth-of-type(1) {
+    margin-bottom: 70px;
+}
+p:nth-of-type(2) {
+    margin-bottom: 30px;
+}
+
+div {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}  
+
+figure {
+    width: 375px; 
+    overflow: hidden; 
+    margin: 0 0 10px 0;
+    border-radius: 10px; 
+}
+
+figcaption {
+    background-color: #37516b;
+    color: azure;
+    text-align: center;
+    padding: 5px;
+}
+
+img {
+    width: inherit;
+    display: block; /*делаю img блочным элементом, чтоб не было лишнего отступа внизу под картинкой*/
+}
+/* @media (min-width:600px) and (max-width:800px) - почему неправильно?*/
+
+/* адаптив при ширине от 800px до 600px */
+ @media screen and (max-width: 800px) {
+    body {
+        margin-right: 0;
+    }
+    div {
+        position: static;
+    }
+    figure {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    p:nth-of-type(2) {
+        margin-top: 40px;
+    }
+} 
+
+/* адаптив при ширине меньше 600px */   
+@media screen and (max-width: 600px) {
+    figure {
+            display: block;
+            width: 100%;
+        }
+    p:nth-of-type(2) {
+            margin-bottom: 30px;
+        }
+    } 
+
+
+
